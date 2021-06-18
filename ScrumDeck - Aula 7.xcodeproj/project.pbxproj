@@ -3,27 +3,65 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		6F45DD9A2678326000073379 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F45DD992678326000073379 /* AppDelegate.swift */; };
-		6F45DD9C2678326000073379 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F45DD9B2678326000073379 /* SceneDelegate.swift */; };
-		6F45DD9E2678326000073379 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F45DD9D2678326000073379 /* ViewController.swift */; };
-		6F45DDA12678326000073379 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F45DD9F2678326000073379 /* Main.storyboard */; };
 		6F45DDA32678326300073379 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F45DDA22678326300073379 /* Assets.xcassets */; };
 		6F45DDA62678326300073379 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F45DDA42678326300073379 /* LaunchScreen.storyboard */; };
+		6F45DDB3267832D100073379 /* SprintRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F45DDB2267832D100073379 /* SprintRouter.swift */; };
+		6F45DDB5267835E700073379 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F45DDB4267835E700073379 /* Coordinator.swift */; };
+		6F45DDB7267836BC00073379 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F45DDB6267836BC00073379 /* BaseRouter.swift */; };
+		6F45DDBA2678380000073379 /* ListSprintsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F45DDB82678380000073379 /* ListSprintsViewController.swift */; };
+		6F45DDBB2678380000073379 /* ListSprintsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F45DDB92678380000073379 /* ListSprintsViewController.xib */; };
+		6F45DDBD2678387900073379 /* ListSprintsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F45DDBC2678387900073379 /* ListSprintsPresenter.swift */; };
+		6F45DDBF2678388500073379 /* ListSprintsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F45DDBE2678388500073379 /* ListSprintsInteractor.swift */; };
+		6F45DDC12678389100073379 /* Sprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F45DDC02678389100073379 /* Sprint.swift */; };
+		6FBFCFF0267C16CB0087782F /* ListSprintsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBFCFEE267C16CB0087782F /* ListSprintsTableViewCell.swift */; };
+		6FBFCFF1267C16CB0087782F /* ListSprintsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FBFCFEF267C16CB0087782F /* ListSprintsTableViewCell.xib */; };
+		6FBFCFFD267C16F30087782F /* NSMutableAttributtedString+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBFCFF4267C16F20087782F /* NSMutableAttributtedString+Extensions.swift */; };
+		6FBFCFFE267C16F30087782F /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBFCFF5267C16F20087782F /* Collection+Extensions.swift */; };
+		6FBFCFFF267C16F30087782F /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBFCFF6267C16F20087782F /* UITableView+Extensions.swift */; };
+		6FBFD000267C16F30087782F /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBFCFF7267C16F20087782F /* String+Extensions.swift */; };
+		6FBFD002267C16F30087782F /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBFCFF9267C16F20087782F /* CGFloat+Extensions.swift */; };
+		6FBFD003267C16F30087782F /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBFCFFA267C16F20087782F /* UIColor+Extensions.swift */; };
+		6FBFD004267C16F30087782F /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBFCFFB267C16F20087782F /* UICollectionView+Extensions.swift */; };
+		6FBFD005267C16F30087782F /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBFCFFC267C16F30087782F /* UIImageView+Extensions.swift */; };
+		6FBFD007267C18F80087782F /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBFD006267C18F80087782F /* UIImage+Extensions.swift */; };
+		6FBFD00A267C1DE10087782F /* SprintDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBFD009267C1DE10087782F /* SprintDAO.swift */; };
+		7EC06A8EAF74CE5CB9794D08 /* Pods_ScrumDeck___Aula_7.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2DF8E508C6B7034979D3BA /* Pods_ScrumDeck___Aula_7.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D2DF8E508C6B7034979D3BA /* Pods_ScrumDeck___Aula_7.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_ScrumDeck___Aula_7.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F45DD962678326000073379 /* ScrumDeck - Aula 7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ScrumDeck - Aula 7.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F45DD992678326000073379 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6F45DD9B2678326000073379 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6F45DD9D2678326000073379 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6F45DDA02678326000073379 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6F45DDA22678326300073379 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F45DDA52678326300073379 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F45DDA72678326300073379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F45DDB2267832D100073379 /* SprintRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintRouter.swift; sourceTree = "<group>"; };
+		6F45DDB4267835E700073379 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		6F45DDB6267836BC00073379 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		6F45DDB82678380000073379 /* ListSprintsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSprintsViewController.swift; sourceTree = "<group>"; };
+		6F45DDB92678380000073379 /* ListSprintsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListSprintsViewController.xib; sourceTree = "<group>"; };
+		6F45DDBC2678387900073379 /* ListSprintsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSprintsPresenter.swift; sourceTree = "<group>"; };
+		6F45DDBE2678388500073379 /* ListSprintsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSprintsInteractor.swift; sourceTree = "<group>"; };
+		6F45DDC02678389100073379 /* Sprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sprint.swift; sourceTree = "<group>"; };
+		6FBFCFEE267C16CB0087782F /* ListSprintsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSprintsTableViewCell.swift; sourceTree = "<group>"; };
+		6FBFCFEF267C16CB0087782F /* ListSprintsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListSprintsTableViewCell.xib; sourceTree = "<group>"; };
+		6FBFCFF4267C16F20087782F /* NSMutableAttributtedString+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributtedString+Extensions.swift"; sourceTree = "<group>"; };
+		6FBFCFF5267C16F20087782F /* Collection+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
+		6FBFCFF6267C16F20087782F /* UITableView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		6FBFCFF7267C16F20087782F /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		6FBFCFF9267C16F20087782F /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
+		6FBFCFFA267C16F20087782F /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		6FBFCFFB267C16F20087782F /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
+		6FBFCFFC267C16F30087782F /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		6FBFD006267C18F80087782F /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		6FBFD009267C1DE10087782F /* SprintDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintDAO.swift; sourceTree = "<group>"; };
+		E2932D6F32E51E464BC2A71A /* Pods-ScrumDeck - Aula 7.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrumDeck - Aula 7.release.xcconfig"; path = "Target Support Files/Pods-ScrumDeck - Aula 7/Pods-ScrumDeck - Aula 7.release.xcconfig"; sourceTree = "<group>"; };
+		E7689995DD86EDA2E7E71515 /* Pods-ScrumDeck - Aula 7.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrumDeck - Aula 7.debug.xcconfig"; path = "Target Support Files/Pods-ScrumDeck - Aula 7/Pods-ScrumDeck - Aula 7.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EC06A8EAF74CE5CB9794D08 /* Pods_ScrumDeck___Aula_7.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +81,8 @@
 			children = (
 				6F45DD982678326000073379 /* ScrumDeck - Aula 7 */,
 				6F45DD972678326000073379 /* Products */,
+				AFD7531FC7153A24AA20B0E2 /* Pods */,
+				B9B2FD1BC92D44E6EBC5A928 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +97,121 @@
 		6F45DD982678326000073379 /* ScrumDeck - Aula 7 */ = {
 			isa = PBXGroup;
 			children = (
+				6FBFCFF2267C16E10087782F /* Util */,
+				6F45DDB1267832BE00073379 /* View */,
+				6F45DDB0267832B800073379 /* Interactor */,
+				6F45DDAF267832B300073379 /* Presenter */,
+				6F45DDAE267832AC00073379 /* Entity */,
+				6F45DDAD267832A300073379 /* Router */,
 				6F45DD992678326000073379 /* AppDelegate.swift */,
-				6F45DD9B2678326000073379 /* SceneDelegate.swift */,
-				6F45DD9D2678326000073379 /* ViewController.swift */,
-				6F45DD9F2678326000073379 /* Main.storyboard */,
 				6F45DDA22678326300073379 /* Assets.xcassets */,
 				6F45DDA42678326300073379 /* LaunchScreen.storyboard */,
 				6F45DDA72678326300073379 /* Info.plist */,
 			);
 			path = "ScrumDeck - Aula 7";
+			sourceTree = "<group>";
+		};
+		6F45DDAD267832A300073379 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				6F45DDB2267832D100073379 /* SprintRouter.swift */,
+				6F45DDB4267835E700073379 /* Coordinator.swift */,
+				6F45DDB6267836BC00073379 /* BaseRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		6F45DDAE267832AC00073379 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				6FBFD008267C1DD20087782F /* Network */,
+				6F45DDC02678389100073379 /* Sprint.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		6F45DDAF267832B300073379 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				6F45DDBC2678387900073379 /* ListSprintsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		6F45DDB0267832B800073379 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				6F45DDBE2678388500073379 /* ListSprintsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		6F45DDB1267832BE00073379 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6FBFCFED267C16B10087782F /* CustomViews */,
+				6F45DDB82678380000073379 /* ListSprintsViewController.swift */,
+				6F45DDB92678380000073379 /* ListSprintsViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6FBFCFED267C16B10087782F /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				6FBFCFEE267C16CB0087782F /* ListSprintsTableViewCell.swift */,
+				6FBFCFEF267C16CB0087782F /* ListSprintsTableViewCell.xib */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		6FBFCFF2267C16E10087782F /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				6FBFCFF3267C16E60087782F /* Extensions */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		6FBFCFF3267C16E60087782F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6FBFCFF9267C16F20087782F /* CGFloat+Extensions.swift */,
+				6FBFCFF5267C16F20087782F /* Collection+Extensions.swift */,
+				6FBFCFF4267C16F20087782F /* NSMutableAttributtedString+Extensions.swift */,
+				6FBFCFF7267C16F20087782F /* String+Extensions.swift */,
+				6FBFCFFB267C16F20087782F /* UICollectionView+Extensions.swift */,
+				6FBFCFFA267C16F20087782F /* UIColor+Extensions.swift */,
+				6FBFCFFC267C16F30087782F /* UIImageView+Extensions.swift */,
+				6FBFCFF6267C16F20087782F /* UITableView+Extensions.swift */,
+				6FBFD006267C18F80087782F /* UIImage+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6FBFD008267C1DD20087782F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				6FBFD009267C1DE10087782F /* SprintDAO.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		AFD7531FC7153A24AA20B0E2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E7689995DD86EDA2E7E71515 /* Pods-ScrumDeck - Aula 7.debug.xcconfig */,
+				E2932D6F32E51E464BC2A71A /* Pods-ScrumDeck - Aula 7.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B9B2FD1BC92D44E6EBC5A928 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D2DF8E508C6B7034979D3BA /* Pods_ScrumDeck___Aula_7.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +221,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F45DDAA2678326300073379 /* Build configuration list for PBXNativeTarget "ScrumDeck - Aula 7" */;
 			buildPhases = (
+				D449D9A38DA12F0729E9E687 /* [CP] Check Pods Manifest.lock */,
 				6F45DD922678326000073379 /* Sources */,
 				6F45DD932678326000073379 /* Frameworks */,
 				6F45DD942678326000073379 /* Resources */,
+				652C8A012336AAF0EDD12457 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,36 +273,87 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F45DDBB2678380000073379 /* ListSprintsViewController.xib in Resources */,
 				6F45DDA62678326300073379 /* LaunchScreen.storyboard in Resources */,
 				6F45DDA32678326300073379 /* Assets.xcassets in Resources */,
-				6F45DDA12678326000073379 /* Main.storyboard in Resources */,
+				6FBFCFF1267C16CB0087782F /* ListSprintsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		652C8A012336AAF0EDD12457 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ScrumDeck - Aula 7/Pods-ScrumDeck - Aula 7-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ScrumDeck - Aula 7/Pods-ScrumDeck - Aula 7-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ScrumDeck - Aula 7/Pods-ScrumDeck - Aula 7-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D449D9A38DA12F0729E9E687 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScrumDeck - Aula 7-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6F45DD922678326000073379 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F45DD9E2678326000073379 /* ViewController.swift in Sources */,
+				6FBFD004267C16F30087782F /* UICollectionView+Extensions.swift in Sources */,
+				6F45DDB3267832D100073379 /* SprintRouter.swift in Sources */,
+				6FBFCFFF267C16F30087782F /* UITableView+Extensions.swift in Sources */,
+				6FBFD007267C18F80087782F /* UIImage+Extensions.swift in Sources */,
+				6F45DDC12678389100073379 /* Sprint.swift in Sources */,
+				6F45DDB7267836BC00073379 /* BaseRouter.swift in Sources */,
+				6FBFCFF0267C16CB0087782F /* ListSprintsTableViewCell.swift in Sources */,
+				6FBFD00A267C1DE10087782F /* SprintDAO.swift in Sources */,
+				6FBFD003267C16F30087782F /* UIColor+Extensions.swift in Sources */,
+				6F45DDBA2678380000073379 /* ListSprintsViewController.swift in Sources */,
+				6FBFD005267C16F30087782F /* UIImageView+Extensions.swift in Sources */,
+				6F45DDBF2678388500073379 /* ListSprintsInteractor.swift in Sources */,
+				6FBFCFFE267C16F30087782F /* Collection+Extensions.swift in Sources */,
+				6F45DDBD2678387900073379 /* ListSprintsPresenter.swift in Sources */,
+				6FBFD000267C16F30087782F /* String+Extensions.swift in Sources */,
+				6F45DDB5267835E700073379 /* Coordinator.swift in Sources */,
 				6F45DD9A2678326000073379 /* AppDelegate.swift in Sources */,
-				6F45DD9C2678326000073379 /* SceneDelegate.swift in Sources */,
+				6FBFD002267C16F30087782F /* CGFloat+Extensions.swift in Sources */,
+				6FBFCFFD267C16F30087782F /* NSMutableAttributtedString+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6F45DD9F2678326000073379 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6F45DDA02678326000073379 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6F45DDA42678326300073379 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -283,6 +483,7 @@
 		};
 		6F45DDAB2678326300073379 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7689995DD86EDA2E7E71515 /* Pods-ScrumDeck - Aula 7.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +503,7 @@
 		};
 		6F45DDAC2678326300073379 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2932D6F32E51E464BC2A71A /* Pods-ScrumDeck - Aula 7.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

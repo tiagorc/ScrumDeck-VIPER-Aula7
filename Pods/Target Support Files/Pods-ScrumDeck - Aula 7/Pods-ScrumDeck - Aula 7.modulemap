@@ -1,0 +1,6 @@
+framework module Pods_ScrumDeck___Aula_7 {
+  umbrella header "Pods-ScrumDeck - Aula 7-umbrella.h"
+
+  export *
+  module * { export * }
+}
