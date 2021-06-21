@@ -13,6 +13,7 @@ protocol ListSprintsInteractorToPresenter: AnyObject {
     func showSprint(sprint: Sprint)
     func processError(error: Error?)
     func sprintWasDeleted()
+    func sprintWasCreated(_ sprint: Sprint)
 }
 
 extension ListSprintsInteractorToPresenter {
@@ -67,6 +68,17 @@ extension ListSprintsInteractor: ListSprintsInteractorInput {
                 }
                 
                 self?.output?.sprintWasDeleted()
+            }.disposed(by: disposeBag)
+    }
+    
+    func createSprint(with title: String, link: String?) {
+        SprintDAO.createSprint(with: title, link: link)
+            .subscribe{ [weak self] result in
+                guard let sprint = result.element as? Sprint else {
+                    self?.output?.processError(error: NSError() as Error)
+                    return
+                }
+                self?.output?.sprintWasCreated(sprint)
             }.disposed(by: disposeBag)
     }
 }

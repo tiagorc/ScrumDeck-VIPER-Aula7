@@ -28,6 +28,7 @@ class ListSprintsViewController: UIViewController {
 
         self.title = "Sprints"
         setupTableView()
+        setupNavigationBar()
         bindPresenter()
     }
 
@@ -41,6 +42,18 @@ class ListSprintsViewController: UIViewController {
         self.tableView.addSubview(self.refreshControl)
         
         self.tableView.registerCell(type: ListSprintsTableViewCell.self)
+    }
+    
+    private func setupNavigationBar() {
+        let addSprintBarButton = UIBarButtonItem(
+            barButtonSystemItem: .add,
+            target: self,
+            action: #selector(addSprint(_:)))
+        self.navigationItem.setRightBarButton(addSprintBarButton, animated: true)
+    }
+    
+    @objc func addSprint(_ sender: UIBarButtonItem) {
+        presenter?.createSprint(with: "Sprint 97", link: nil)
     }
     
     @objc func pullToRefresh(_ sender: UIRefreshControl) {

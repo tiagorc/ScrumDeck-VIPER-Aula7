@@ -8,6 +8,7 @@
 import Foundation
 import RxSwift
 import RxAlamofire
+import Alamofire
 
 struct SprintDAO {
     static let kBaseURL: String = "https://scrum-deck-backend.herokuapp.com"
@@ -37,5 +38,17 @@ struct SprintDAO {
             .map({ result in
                 return result
             })
+    }
+    
+    static func createSprint(with title: String, link: String?) -> Observable<Sprint?>{
+        return RxAlamofire
+            .requestJSON(
+                .post,
+                "\(kBaseURL)/sprint",
+                parameters: ["title" : title, "link": link ?? ""])
+            .debug()
+            .map { (response) in
+                return nil
+            }
     }
 }

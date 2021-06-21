@@ -14,6 +14,7 @@ protocol ListSprintsPresenterToView: AnyObject {
     func getSprints()
     func getSprint(by id: Int)
     func deleteSprint(by id: Int)
+    func createSprint(with title: String, link: String?)
 }
 
 class ListSprintsPresenter {
@@ -44,6 +45,11 @@ extension ListSprintsPresenter: ListSprintsPresenterToView {
         view?.setLoading(true)
         interactor?.deleteSprint(by: id)
     }
+    
+    func createSprint(with title: String, link: String?) {
+        view?.setLoading(true)
+        interactor?.createSprint(with: title, link: link)
+    }
 }
 
 extension ListSprintsPresenter: ListSprintsInteractorToPresenter {
@@ -60,5 +66,16 @@ extension ListSprintsPresenter: ListSprintsInteractorToPresenter {
     
     func sprintWasDeleted() {
         getSprints()
+    }
+    
+    func sprintWasCreated(_ sprint: Sprint) {
+        view?.setLoading(false)
+        var update = self.sprints.value
+        update?.insert(sprint, at: .zero)
+        self.sprints.accept(update)
+    }
+    
+    func processError(error: Error?) {
+        view?.setLoading(false)
     }
 }
