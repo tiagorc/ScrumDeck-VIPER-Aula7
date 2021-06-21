@@ -30,12 +30,12 @@ struct SprintDAO {
             }
     }
     
-    static func deleteSprint(by id: Int) -> Observable<String> {
+    static func deleteSprint(by id: Int) -> Observable<Any> {
         return RxAlamofire
-            .requestDecodable(.delete, "\(kBaseURL)/sprint/\(id)")
+            .request(.delete, "\(kBaseURL)/sprint/\(id)")
             .debug()
-            .map { (response, result: String) in
+            .map({ result in
                 return result
-            }
+            })
     }
 }

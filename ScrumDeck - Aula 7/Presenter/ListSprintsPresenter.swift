@@ -59,6 +59,6 @@ extension ListSprintsPresenter: ListSprintsInteractorToPresenter {
     }
     
     func sprintWasDeleted() {
-        view?.setLoading(false)
+        getSprints()
     }
 }
