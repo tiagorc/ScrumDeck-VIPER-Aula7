@@ -16,8 +16,9 @@ protocol ListSprintsViewToPresenter: AnyObject {
 class ListSprintsViewController: UIViewController {
 
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
     @IBOutlet weak var tableView: UITableView!
+    
+    let refreshControl = UIRefreshControl()
     var presenter: ListSprintsPresenterToView?
     
     private let disposeBag = DisposeBag()
@@ -35,7 +36,15 @@ class ListSprintsViewController: UIViewController {
         self.tableView.dataSource = self
         self.tableView.rowHeight = UITableView.automaticDimension
         
+        self.refreshControl.attributedTitle = NSAttributedString(string: "Puxe para atualizar")
+        self.refreshControl.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
+        self.tableView.addSubview(self.refreshControl)
+        
         self.tableView.registerCell(type: ListSprintsTableViewCell.self)
+    }
+    
+    @objc func pullToRefresh(_ sender: UIRefreshControl) {
+        presenter?.getSprints()
     }
     
     private func bindPresenter() {
@@ -86,7 +95,12 @@ class ListSprintsViewController: UIViewController {
 
 extension ListSprintsViewController: ListSprintsViewToPresenter {
     func setLoading(_ loading: Bool) {
-        loading ? self.activityIndicator.startAnimating() : self.activityIndicator.stopAnimating()
+        if loading {
+            self.activityIndicator.startAnimating()
+        } else {
+            self.activityIndicator.stopAnimating()
+            self.refreshControl.endRefreshing()
+        }
     }
 }
 
