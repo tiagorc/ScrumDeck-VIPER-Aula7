@@ -40,14 +40,20 @@ struct SprintDAO {
             })
     }
     
+    
+    
     static func createSprint(with title: String, link: String?) -> Observable<Sprint?>{
+        let sprint = Sprint(nome: title, link: link ?? kBaseURL)
+        let data = (try? JSONEncoder().encode(sprint)) ?? Data()
+        
+        var request = try! URLRequest(url: "\(kBaseURL)/sprint", method: .post)
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = data
+
         return RxAlamofire
-            .requestJSON(
-                .post,
-                "\(kBaseURL)/sprint",
-                parameters: ["title" : title, "link": link ?? ""])
+            .requestResponse(request)
             .debug()
-            .map { (response) in
+            .map { result in
                 return nil
             }
     }
